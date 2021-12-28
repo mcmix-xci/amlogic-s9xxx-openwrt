@@ -58,3 +58,9 @@ svn co https://github.com/hubutui/p7zip-lede/trunk package/p7zip
 # ------------------------------- Other ends -------------------------------
 # app bypass
 svn co https://github.com/garypang13/luci-app-bypass.git package/luci-app-bypass
+
+# Adguard home
+svn co https://github.com/rufengsuixing/luci-app-adguardhome/trunk package/lean/luci-app-adguardhome
+
+# ssrPlus
+
