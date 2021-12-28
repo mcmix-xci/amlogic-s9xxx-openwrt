@@ -108,3 +108,6 @@ svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/openw
 
 rm -rf package/openwrt-ssrplus/luci-app-ssr-plus/po/zh_Hans 2>/dev/null
 
+# modem
+svn co https://github.com/koshev-msk/luci-app-modeminfo/trunk package/luci-app-modeminfo
+
