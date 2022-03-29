@@ -49,15 +49,4 @@ svn co https://github.com/hubutui/p7zip-lede/trunk package/lean/p7zip
 # Apply patch
 # git apply ../router-config/patches/{0001*,0002*}.patch --directory=feeds/luci
 #
-# ------------------------------- Other started -------------------------------
-#
-# Add luci-app-openclash
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/openwrt-openclash
-pushd package/openwrt-openclash/tools/po2lmo && make && sudo make install 2>/dev/null && popd
-mkdir -p package/base-files/files/etc/openclash/core/
-cd package/base-files/files/etc/openclash/core/
-clash_main_url=$(curl -sL https://api.github.com/repos/vernesong/OpenClash/releases/tags/Clash | grep /clash-linux-armv8 | sed 's/.*url\": \"//g' | sed 's/\"//g')
-wget $clash_main_url && tar zxvf clash-linux-*.tar.gz && cp clash clash_tun && rm -f clash-linux-*.gz
-chmod +x clash*
-#
 # ------------------------------- Other ends -------------------------------
